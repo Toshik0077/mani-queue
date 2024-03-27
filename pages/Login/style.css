@@ -1,0 +1,158 @@
+body{
+    background-color: #615d56;
+}
+#app{
+    display: flex;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+.verification{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+	margin: 0 auto;
+
+    width: 393px;
+    height: 852px;
+
+    border-radius: 16px;
+   background-image: url(./img/Fone.png);
+   background-repeat: no-repeat;
+
+}
+
+.auth-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 300px;
+
+
+}
+.auth-title{
+    margin-top: 118px;
+   
+
+    
+    font-family: "Pacifico";
+    font-weight: 500;
+    font-size: 55px;
+    color:#fffefe;
+
+}
+.pass-input-container{
+ 
+
+}
+.email-input-label{
+    display: block;
+
+    font-family: "Pacifico";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color:#F0EFEF;
+
+    
+}
+.email-input{
+    width: 230px;
+    height: 37px;
+    padding-left: 16px;
+    box-sizing: border-box; 
+   
+
+    border-radius: 15px;
+    border: 1px solid #F0EFEF;
+
+    background-color: #8e8870;
+
+    font-weight: 400;
+font-size: 20px;
+color: #fffbfb;
+
+    
+}
+.pass-input-label{
+    display: block;
+    margin-top: 32px;
+
+    font-family: "Pacifico";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color:#F0EFEF;
+
+    
+}
+.pass-input{
+    width: 230px;
+    height: 37px;
+    box-sizing: border-box; 
+    padding-left: 16px;
+   
+   
+
+    border-radius: 15px;
+    border: 1px solid #F0EFEF;
+
+    background-color: #8e8870;
+
+    font-weight: 400;
+    font-size: 20px;
+    color: #fffbfb;
+}
+.submit-btn{
+    width: 140px;
+    height: 42px;
+    border-radius: 15px;
+    border: 1px solid #F0EFEF;
+    margin-top: 30px;
+    margin-left: 80px;
+    cursor: pointer;
+
+    background-color:#8e8870;
+    
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:#F0EFEF;
+}
+.submit-btn:hover{
+    background-color:#a19461;
+    color:#fff;
+
+}
+.error_email,.error_password {
+    color: rgb(240, 12, 12);
+    margin: 0;
+    
+}
+/************************media***********************************************/
+@media only screen and (min-width: 1024px) {
+    .verification {
+        background-image: url(./img/fone_max.png);
+        width: 700px;
+    height: 500px;
+    
+    }
+    .auth-title{
+        margin-top: 5px;
+
+        font-size: 60px;
+        
+    
+    }
+    .auth-form{
+        margin-top: 20px;
+    }
+
+}

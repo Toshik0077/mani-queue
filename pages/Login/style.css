@@ -1,13 +1,4 @@
-body{
-    background-color: #615d56;
-}
-#app{
-    display: flex;
-    align-items: center;
 
-    width: 100vw;
-    height: 100vh;
-}
 .verification{
     display: flex;
     flex-direction: column;
@@ -21,7 +12,7 @@ body{
     height: 852px;
 
     border-radius: 16px;
-   background-image: url(./img/Fone.png);
+   background-image: url(../../assets/Fone.png);
    background-repeat: no-repeat;
 
 }
@@ -139,7 +130,7 @@ color: #fffbfb;
 /************************media***********************************************/
 @media only screen and (min-width: 1024px) {
     .verification {
-        background-image: url(./img/fone_max.png);
+        background-image: url(../../assets/fone_max.png);
         width: 700px;
     height: 500px;
     

@@ -1,0 +1,15 @@
+.btn {
+	cursor: pointer;
+	padding: 0.5em 2em;
+	border-radius: 15px;
+	border: 1px solid #f0efef;
+	color: #f0efef;
+
+	font-family: 'Poppins';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.btn:hover {
+	border: 1px solid #f7d653;
+}

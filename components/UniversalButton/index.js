@@ -3,21 +3,23 @@ import './index.css'
 function UniversalButton(text, backgroundColor, clickHandler) {
 	this.button = document.createElement('button')
 	this.button.textContent = text
-	const styles = this.colorStyles(backgroundColor)
-	Object.assign(this.button.style, styles)
+	this.button.style.backgroundColor = this.getBackgroundColor(backgroundColor)
 	this.button.classList.add('btn')
 	this.button.addEventListener('click', clickHandler)
 }
 UniversalButton.prototype.render = function (parent) {
 	parent.append(this.button)
 }
-UniversalButton.prototype.colorStyles = function (colorType) {
-	if (colorType === 'submit') {
-		return { backgroundColor: '#8e8870' }
-	} else if (colorType === 'cancel') {
-		return { backgroundColor: '#f06360' }
-	} else if (colorType === 'disabled') {
-		return { backgroundColor: '#7b7575' }
+UniversalButton.prototype.getBackgroundColor = function (colorType) {
+	switch (colorType) {
+		case 'submit':
+			return '#8e8870'
+		case 'cancel':
+			return '#f06360'
+		case 'disabled':
+			return '#7b7575'
+		default:
+			return 'red'
 	}
 }
 

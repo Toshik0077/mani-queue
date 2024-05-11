@@ -1,3 +1,5 @@
+import UniversalButton from '../../components/UniversalButton'
+
 function Login() {
 	this.parent = document.getElementById('app')
 	this.elements = {
@@ -15,8 +17,8 @@ function Login() {
 		passInputlabel: document.createElement('label'),
 		passInput: document.createElement('input'),
 
-		submitBtn: document.createElement('button'),
-
+		// submitBtn: document.createElement('button'),
+		submitBtn: new UniversalButton('Iniciar', 'submit', this.handleSubmit),
 		emailErrorMessage: document.createElement('p'),
 		passErrorMessage: document.createElement('p'),
 	}
@@ -37,7 +39,7 @@ Login.prototype.render = function (parent) {
 	this.elements.passInputlabel.classList.add('pass-input-label')
 	this.elements.passInput.classList.add('pass-input')
 
-	this.elements.submitBtn.classList.add('submit-btn')
+	// this.elements.submitBtn.classList.add('submit-btn')
 	/*************************************content****************************************** */
 	this.elements.authTitle.textContent = 'Open Nails'
 
@@ -57,11 +59,11 @@ Login.prototype.render = function (parent) {
 	this.elements.passErrorMessage.textContent = 'Please provide a valid password '
 	this.elements.passErrorMessage.className = 'error_password'
 
-	this.elements.submitBtn.classList.add('submit-btn')
+	// this.elements.submitBtn.classList.add('submit-btn')
 
-	this.elements.submitBtn.textContent = 'Iniciar'
-	this.elements.submitBtn.setAttribute('type', 'submit')
-	this.elements.submitBtn.addEventListener('click', this.handleSubmit.bind(this))
+	// this.elements.submitBtn.textContent = 'Iniciar'
+	// this.elements.submitBtn.setAttribute('type', 'submit')
+	// this.elements.submitBtn.addEventListener('click', this.handleSubmit.bind(this))
 
 	/************************************ Додаємо всі елементи на сторінку*******************/
 
@@ -69,7 +71,9 @@ Login.prototype.render = function (parent) {
 
 	this.elements.passInputContainer.append(this.elements.passInputlabel, this.elements.passInput)
 
-	this.elements.authForm.append(this.elements.emailInputContainer, this.elements.passInputContainer, this.elements.submitBtn)
+	this.elements.authForm.append(this.elements.emailInputContainer, this.elements.passInputContainer)
+
+	this.elements.submitBtn.render(this.elements.authForm)
 
 	this.elements.section.append(this.elements.authTitle, this.elements.authForm)
 

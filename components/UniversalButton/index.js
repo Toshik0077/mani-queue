@@ -1,10 +1,11 @@
 import './index.css'
 
-function UniversalButton(text, backgroundColor, clickHandler) {
+function UniversalButton(text, backgroundColor, clickHandler, className = '') {
 	this.button = document.createElement('button')
 	this.button.textContent = text
 	this.button.style.backgroundColor = this.getBackgroundColor(backgroundColor)
 	this.button.classList.add('btn')
+	this.button.classList.add(className)
 	this.button.addEventListener('click', clickHandler)
 }
 UniversalButton.prototype.render = function (parent) {

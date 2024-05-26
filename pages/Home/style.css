@@ -1,0 +1,117 @@
+.home {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+	background-image: url(../../assets/fone_max.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.cotent-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 60px;
+	gap: 40px;
+	height: 100%;
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+.box-picture {
+	width: 223px;
+	height: 226px;
+}
+.sidebar {
+	max-height: 80px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	gap: 50px;
+
+	background-color: #8e8870;
+}
+.sidebar-link {
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	transform-origin: center;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sidebar-link:hover {
+	background-color: #e0d195;
+	transform: scale(1.05);
+	border-radius: 15px;
+}
+
+.sidebar-link-title {
+	padding: 5px 0;
+
+	font-family: 'Poppins';
+	font-size: 16px;
+	line-height: 24px;
+	color: #fef9f9;
+}
+.sidebar-link-icon {
+	width: 24px;
+	height: 24px;
+}
+
+@media (min-width: 1024px) {
+	.home {
+		flex-direction: row-reverse;
+		justify-content: none;
+		align-items: none;
+	}
+	.sidebar {
+		flex-direction: column;
+		max-height: none;
+		height: 100vh;
+		max-width: 100px;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.sidebar-link {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.sidebar-link-icon {
+		margin-right: 15px;
+	}
+
+	.sidebar-link-title {
+		font-size: 18px;
+	}
+	.cotent-container {
+		width: 100%;
+	}
+	.box {
+		width: 500px;
+		height: 500px;
+	}
+	.box-picture {
+		width: 400px;
+		height: 400px;
+	}
+	.btn-home-page {
+		width: 80%;
+		padding: 1em 0 !important;
+
+		font-size: 20px !important;
+	}
+}
